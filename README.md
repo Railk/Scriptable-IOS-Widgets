@@ -113,4 +113,4 @@ const USERS = [
   'pacota22ma'
 ];
 ```
- 5. Chose **run script** on the modify widget to enable saving on tap
+ 5. Choose **run script** on the modify widget to enable saving on tap
