@@ -11,7 +11,7 @@ const HEADERS = {
   'Authorization':'Bearer '+BEARER_TOKEN
 };
 const OPTIONS = ['Small', 'Medium', 'Large', 'Cancel'];
-const REFRESH_INTERVAL = 2;
+const REFRESH_INTERVAL = 5;
 const PARAMETERS = 'tweet.fields=attachments,created_at'+
                   '&exclude=retweets,replies'+
                   '&expansions=attachments.media_keys'+
