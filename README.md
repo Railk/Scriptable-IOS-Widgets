@@ -1,5 +1,5 @@
 # Scriptable-IOS-Widgets
-IOS Widget made with scriptable provided as is. 
+IOS Widget made with scriptable https://scriptable.app/ provided as is. 
 
 
 ## GARMIN HEALTH Widget
