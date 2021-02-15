@@ -23,7 +23,7 @@ IOS Widget made with scriptable https://scriptable.app/ provided as is.
 
 2. Create a new script in Scriptable app and copy the .js code in it
 
-3. There are 6 themes available, the default one is **blue orange**. You can override it with one of the other theme by :
+3. There are 6 themes available, the default one is **blue orange**. You can override it with one of the others by :
   * Modifying the widget
   * Putting the name of the theme you want in the parameter field
   ![Image of the garmin widget small size](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3776.png)
