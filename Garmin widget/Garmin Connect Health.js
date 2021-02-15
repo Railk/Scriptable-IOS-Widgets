@@ -14,7 +14,7 @@ https://github.com/cyberjunky/python-garminconnect
     CONST
 -------------*/
 const OPTIONS = ['Small', 'Medium', 'Large', 'Cancel'];
-const REFRESH_INTERVAL = 2;
+const REFRESH_INTERVAL = 5;
 const SIZES = {
   'small': {'width':156,'height':156},
   'medium': {'width':330,'height':156},
