@@ -23,12 +23,12 @@ IOS Widget made with scriptable https://scriptable.app/ provided as is.
 
 2. Create a new script in Scriptable app and copy the .js code in it
 
-3. There's differents theme available, the default one is **blue orange**. You can ovveride it with one of the other theme by :
-  * Modiying the widget
+3. There's different themes available, the default one is **blue orange**. You can ovveride it with one of the other theme by :
+  * Modifying the widget
   * Putting the name of the theme you want in the parameter field
   ![Image of the garmin widget small size](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3776.png)
   
-4. Liste of the themes name :
+4. List of the themes names :
   * bluenight
   * blueorange
   * orangered
@@ -69,7 +69,7 @@ IOS Widget made with scriptable https://scriptable.app/ provided as is.
   ![Image of the garmin widget small size](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3777.png)
   
   #### Bonus
-  1. If you do not walk for e long time the widget is angry (show teeth ;p) :
+  1. If you do not walk for a long time the widget is angry (show teeth ;p) :
   
   ![Image of the garmin widget small size angry](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3698.png)
   
@@ -113,4 +113,4 @@ const USERS = [
   'pacota22ma'
 ];
 ```
- 5. Choose **run script** on the modify widget to enable saving on tap
+ 5. Choose **run script** in interactions when modifying widget to enable saving on tap
