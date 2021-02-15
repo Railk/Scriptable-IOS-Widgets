@@ -93,11 +93,11 @@ IOS Widget made with scriptable provided as is.
 
 #### Usage
 1. By tapping on the picture you can save it in your photos album
-2. by tapping the username you can go directly to the tweet on twitter.
+2. By tapping the username you can go directly to the tweet on twitter.
 
 #### Configuration
 1. Create a new script in Scriptable app and copy the .js code in it
-2. For this widget to work you need to have a twitter developper account (free) and get your BEARER TOKEN
+2. **For this widget to work you need to have a twitter developper account (free) and get your BEARER TOKEN**
 3. Put your bearer token here in the .js file :
 
 ```javascript
