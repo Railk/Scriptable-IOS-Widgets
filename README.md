@@ -28,7 +28,7 @@ IOS Widget made with scriptable https://scriptable.app/ provided as is.
   * Putting the name of the theme you want in the parameter field
   ![Image of the garmin widget small size](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3776.png)
   
-4. List of the themes names :
+4. List of the themes :
   * bluenight
   * blueorange
   * orangered
