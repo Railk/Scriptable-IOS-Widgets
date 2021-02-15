@@ -735,14 +735,14 @@ let peach = {
   'separator': new Color('FF7A9E')
 };
 
-var themes = {
+let themes = {
   'bluenight':blue_night,
   'blueorange':blue_orange,
   'orangered':orange_red,
   'black':black,
   'evashogoki': eva_shogoki,
   'peach':peach
-}
+};
 
 /*-------------
     LAUNCH
