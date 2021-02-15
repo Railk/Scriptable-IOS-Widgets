@@ -235,25 +235,6 @@ async function getUserStats(date = new Date()) {
   return data;
 }
 
-/*
-async function getSleepData(date = new Date()) {
-   const dateString = toDateString(date);
-  return this.get(urls.dailySleepData(this.userHash),'date='+dateString);
-}
-
-async function getActivities(start, limit) {
-  return this.get(urls.activities(), { start, limit });
-}
-
-async function getActivity(activity, maxChartSize, maxPolylineSize) {
-  const { activityId } = activity || {};
-  if (activityId) {
-    return this.get(urls.activity(activityId), { maxChartSize, maxPolylineSize });
-  }
-  return Promise.reject();
-}
-*/
-
 
 /*-------------
     CHARTS
@@ -353,7 +334,7 @@ CircleChart.prototype.draw = function(percent,radius,lineWidth,icon){
 
 
 /*-------------
-    INIALIZE
+    INIT
 -------------*/
 let USERHASH = '';
 await signin();
@@ -411,25 +392,6 @@ let datas = {
   'sleepingMinutes' : hours.toString()+'h'+minutes.toString(),
   'stressLevel' : stressLevel.toString(),
 }
-
-//DUMMY DATA
-// let steps = 178;
-// let data = [-0.3,0.3,-0.3,0.3,-0.3,0.3,-0.3];
-// let heartmin = 34;
-// let heartmax = 120;
-// let datas = {
-//   'wave' : data,
-//   'steps' : steps.toString(),
-//   'heartmin' : heartmin.toString(),
-//   'heartmax' : heartmax.toString(),
-//   'stepGoal' : '3000',
-//   'percent' : '76',
-//   'calories' : '1765',
-//   'activeMinutes' : '20',
-//   'sleepingMinutes' : '900',
-//   'stressLevel' : '34',
-// }
-
 
 /*-------------
   WIDGET UTILS
