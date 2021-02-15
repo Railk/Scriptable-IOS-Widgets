@@ -85,3 +85,21 @@ IOS Widget made with scriptable provided as is.
 
 
 ## TWITTER ART Widget
+
+### A widget to show one of the last 10 drawing/paining/photo i.e image of your favorite users on twitter
+
+#### heres a view of the large size (smaller sizes are the same)
+![Image of the twitter widget big size](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3778.png?raw=true)
+
+#### Usage
+1. By tapping on the picture you can save it in your photos album
+2. by tapping the username you can go directly to the tweet on twitter.
+
+#### Configuration
+1. Create a new script in Scriptable app and copy the .js code in it
+2. For this widget to work you need to have a twitter developper account (free) and get your BEARER TOKEN
+3. Put your bearer token here in the .js file :
+
+```javascript
+const BEARER_TOKEN = "YOUR BEARER TOKEN HERE";
+```
