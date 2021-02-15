@@ -103,3 +103,13 @@ IOS Widget made with scriptable provided as is.
 ```javascript
 const BEARER_TOKEN = "YOUR BEARER TOKEN HERE";
 ```
+4. Edit your list of favorite users here (remove the exemples but they are great artist though ;p)
+```javascript
+const USERS = [
+  '666pigeon',
+  'inukainuzoku',
+  'daisukerichard',
+  'Criisalys',
+  'pacota22ma'
+];
+```
