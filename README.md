@@ -84,7 +84,7 @@ IOS Widget made with scriptable provided as is.
 
 
 
-## TWITTER ART Widget
+## TWITTER ART Widget (you need a free twitter dev account)
 
 ### A widget to show one of the last 10 drawing/paining/photo i.e image of your favorite users on twitter
 
