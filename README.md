@@ -69,13 +69,16 @@ IOS Widget made with scriptable provided as is.
   ![Image of the garmin widget small size](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3777.png)
   
   #### Bonus
-  If you do not walk for e long time the widget is angry (show teeth ;p)
+  1. If you do not walk for e long time the widget is angry (show teeth ;p) :
+  
   ![Image of the garmin widget small size angry](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3698.png)
   
-  If you didn't do steps the widget is circonspect
+  2. If you didn't do steps the widget is circonspect:
+  
   ![Image of the garmin widget small size circonspect](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3699.png)
   
-  if you meet your goal you have a green check
+  3. if you meet your goal you have a green check :
+  
   ![Image of the garmin widget small win](https://github.com/Railk/Scriptable-IOS-Widgets/blob/main/screenshots/IMG_3767_b.png)
   
 
