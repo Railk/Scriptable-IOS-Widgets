@@ -503,7 +503,7 @@ let getMoreInfos = function(container,theme,datas,large = false){
 
     //ACTIVE MINUTES
     getTextIcon(moreC2,'walk',datas.activeMinutes,theme.infosColor,fontSize,s.walk.w,s.walk.h,1);
-    moreC2.addSpacer(8);
+    moreC2.addSpacer(6);
 
     //SLEEP TIME
     getTextIcon(moreC2,'sleep',datas.sleepingMinutes,theme.infosColor,fontSize,s.sleep.w,s.sleep.h);
@@ -631,7 +631,7 @@ async function createWidget(datas,theme,size) {
             moreStack.addSpacer();
 
               let more = moreStack.addStack();
-              more.setPadding(0,16,0,36);
+              more.setPadding(0,12,0,32);
               getMoreInfos(more,theme,datas,large);
           }
 
