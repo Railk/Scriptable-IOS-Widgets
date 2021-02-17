@@ -106,6 +106,7 @@ const IMAGES = {
   'sleep':'iVBORw0KGgoAAAANSUhEUgAAACIAAAAkCAYAAADsHujfAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIqADAAQAAAABAAAAJAAAAACNOlT0AAACM0lEQVRYCdWYPUwUQRiGb0UE/4CgMf6Ea0iUBmNBRwHXQiIeBivNNXRUhoaEhthYWBgSagoTrKDRjoaKhhBLAqeViRpyMWJy8YiJns9HGLKZvdv9Zm93L37Jk52deef9Xubu9i7kcv9b1ev1x/Cqbblpnof3ILXWliA0LsBPSXBaY5kHofE0HJsEXPfbEWKKxn98IWQ4n2kQGg7CkXS26m5mQWjcBR+sAHL7F7qyDPK8QQiZ+pJliMs0PGwSZDvtIOd8DeYY3/Dd+4epn4g/yFN/Z2vcZ90nfnsShJcjj/NwiPutkLVElsyJTEa4ZRbkfkSQa5zanQhNS8vmRG4qXKYUmtgSlyCPYndRbDRBrii047w8mpNTWAUlJshhcCkw08nMUmA2oQkT5JvSb5ZTGVJqnWQmyFflrg50rwnjKfVuMowfgku9cOugVJOgG6ouSdA+Udq7yTDecAzyC33RrYtCjemEYxCRyw+mRYW9mwTTLYhT62wacOsWosZsBOSvjFM1Nr2E3pAW+iWMVuKk8O35wfgNFOFSWGfWe2BUNIHnAQvnmd+EggharBr790CeU/LQrMBVuA734AGUT69crCJMP3yCtGuXBhKqeSG4DTspJtnCW04nuhBehLeQdL3DsDs6gaVgUwk+Q6tVxqAE8p0Vr9gsp7MAFXCtAzY8g/gB7NhiBvLvimX4CL+hUcmbfRVmwHzL23Zn94GP79mKckAT8ZB3vvzSvwDfoeJ5XpWruv4BS+6UuQkTYsQAAAAASUVORK5CYII=',
   'heart':'iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAJqADAAQAAAABAAAAJgAAAACE8iBbAAADOElEQVRYCc2YT4hNURzH55mRmVAaSqZolIbxZ8Eo2cifbMhQilgQYjE1pJCk2UpYkKVZkR07CwsU3ixGiWZDM5kYERokTE3G8/nd9857975zzzn3z7svv/q+c+7vz/d873nn3nvubWj4Ty2XVFehUJhO7XrQDhaU0Ej7sYQx2nwul5ugzdYQ0wR2g1vgG3DZLxLuggOgJRN1EO8Cr0BSe0/hYTCtJgIhWgyegFrZEERdqcRBsAF8qZUiH89v+nsSiaNQ1sWkjyyLbl8scSjYCv5koSSE81gkcRR2gChXXMgYiVzyr2ysFhe4j5HQRMILsKI6MePjcfiXcs+T1rPqS/co3nqLEiFzwXnpKCvPGLM1C+cImK+ChvYN/gfgKegE28Eq4LdhDu6B52Ad2Awk12aTBDuZNeGvGMLOAJcFzkpVU7QX/C0Vn1R+f0vsiC+nlKo1/f4ar0/KMy0t6LigFfkcpJ4Al30urUv8eJBSO/qKR9Z50ThYqKUEHT84lAd0aoNnOEitHW2RQdTi73aMOMB/P+XIiRqWtWmznRJUwpbZMokNOOJxwnlHsqdFCZP9lM1m2oIxY3L128zTooS12TKJrXbE44TXOJI9LUrYbEdyF0tUdqypDA65b8qu12aeFiXsky2TWCvoceRECe8jaYkjsaKFM7mpXbS6YxzXHAepMUxtM3ir02qeQSFRM/bByFgJyKxdqxzG7l2kYlGEqooWNHdrus2OeJs7lEDVa6bTIqfL4gnJNP/UUsyOQ+ViRwcKeauaMlNpkeAaJHxHSzE75IF9zqFJZqoHxNkJD2mcEGwDce0GBTOqyfA1gktxycgP3ZnIGT5KQPaSmuVKHP12kE/AM0qNdpIeL4G1QO2r6Ea2CTL7gCzy75Grgon71cmFtuReD+bX5eg+o5R30yZh8n3iYV3kFAd5TRPtxk1iKxgp1mX6K6+JHaEzZHJS0AYGM5Q1CvdK0/hWP4Ut4DaotT2GcJ518ChBSA6CdyCtyV93CqTeQpV1QyazdxYk+fojj7srQDYC2RjkclffBK4CeeMJ+yIkj6Ex0A92gOa4auz3jghsDCocsl5kry7vhPIN9nPat6p/QPV6roMc8t4AAAAASUVORK5CYII=',
   'win':'iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAKqADAAQAAAABAAAAKgAAAADUGqULAAADdElEQVRYCdWY24tNURzH50yMkTJmHlwyQ0gmUiglQ5JLlBe8UDwpcnnxIiS8kDz4ByiXGU9epqhBJrmUW8qDBg3KA1PCRLkOc3x+e2Yd6+y91jpr77PPPvnVt/Vbv8v399vr7LX32qem5j+RXJp95vP5efCtBw3gWi6X60qTv2wuGsyBA+A30OUikzFlF0iDgEZqwVlgk/s4ZIWrJzQgTZ6zdajZH6BXp1kKN4F2rZlS6kMCpiddVudmgrgV4kNgLpgCRgAl9Sj6XNldYx7nVy1gEL0P9IJTbL6bms9PpclF4BfIUnbYurOuKN3dJanNllghez+8LaysvupBqVpTQZoU+0KTr8K2RvhnmWoYGyVwMqgzJWRgm2aqYWt0lCk4I5ts0ojYGo0EVtuQZaPyaOoAd5JctK3RsUnISuQcZTdvJWYZeOGI9XuDyY4Hl0Ca8hSykdIco/C/dJA/wye73y7DJD7vbkediGsQyxJVFX13JCJqeIzJ3CyOUqegKJ2f5bTWZDMpX/zS8o+IG6dyCyPGY54EccLeE9ykiqB3xkkm9gb4t4+YrATyE6UtsnkCgXhjQvKDikNu8I6EJK60blWAoAbwzhXs8L0SHrWsMxSp57iZuKngliX+J/admu8E+iRtHkdt4SKCJ4as6EnHFYVdPaoKjkbwOhzA/IgW08a8nNtKTnFDAtF48Bb4iJxR5UAdCPoC8F1LfI4enBUY60CP5ourDpBQfNTEsBh882SSh3Lh7YW+Tctbrl3EYc2eRN2juIpGmGT366vjIr+CU93jcvucAecVIXor+AGSyj7FZRxhXQV8mz2uSMipB8Ezk1G+82+DpLJf8TpH2HfFqLApTEbu9hj54dD2MJ91TubMcLZjLvf1fEWGPhH0O+JLubYoLn0s3GO6EV3Ojr4ymsAuqq8D8p3VCaLvaF82S+243+W2chNwXLY507DbVjQN7lQ5bI1+TLVKPLIPpnBjo3wyyB8Bn0wJGdiCQ0i4jrHR4aAL4eAM5veoYWzUWpsdLEez6yArkdfyHFtDOZtD2Uleim76N68Z+wYwdARTCe6xG/cTLUQeg32gF1zllhvQfOmpXMRa4Ps+93stptdeMRONrgGlzgbuA0YxZeVmNLoafAZh+YNhb+UqJ2CmITkfyN/fSt6grEhAlU0Kzcm3++y0q/0FlloaAYhWmV4AAAAASUVORK5CYII=',
+  'floors' : 'iVBORw0KGgoAAAANSUhEUgAAACYAAAAiCAYAAAAzrKu4AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAJqADAAQAAAABAAAAIgAAAABxcoabAAACNUlEQVRYCc2YzytEURTHjZ/JUn6UpfzISpL8WFEWCsXKwlJq/gBlYcHeUuEvYKFkqYjNkLJgpdhYkrBCyIzPeSzuPd7c5k5v3nPr2zvn3PPO+cyb19y5t6zsn45UKblyuVwF9efRJGpCrn5Z5i/QQiqVeuJaugHYFvIdG0JUXiosaCaoPVNE/cYi7in8FsBOfR8V+beoW7pUFt6q8EyKD5Hdb9zxhT2LDlDOiJtmlnfr2QxEbgO2i8yxHXkT34LQtKMvkwq717dO5PlAbCio48ib+BYEqAG9KbBx3zqR5wO0oqCu8F0/qpEz/CkIQC16UGBzfxLjDgCUVlB3+DVxc1j9AChHNwpsyUpKwgFoWkG94NcnwWL1BOJEga1ZCUk4AA0qKPlxbU2CxeoJhF5+dqyEJByg2pBefgaSYLF6ArWOzJGxEpJwoJHl59Wkwp5KgsXqCcSygrrGL9k/Yqt5PgeAsOUnnS8/tjhgevmRNbI2NoCwRvJ1IfnazLESlhtrDJopkwhb/n81xAoR1gyIjALbDMuLNQaQXn6yxDpihQhrBsSeelp7YXlRxIJ9Jc06KTaCqh1FZSMqZxDmWDUd06ZmM/4YqjPjDlvOLi7ZW/6sHhToQR/Id5zla0KhenTvW/A3Xw5hgrOLUa5V+Zo44ouOuT7mij2DCHZVsoTItv3T0URPvRNI88iP9IThn2M/Gr6PuS/JwdaKR9iFPYxcmwc5c7hHh0DJ1Tmo2UKCfHrfdyz4wN8j0ghttJTHLwAAAABJRU5ErkJggg==',
 }
 
 
@@ -372,7 +373,7 @@ let heartmax = heartData.maxHeartRate || "--";
 let userStats = await getUserStats();
 let dailyStepGoal = userStats.dailyStepGoal || "--";
 let calories = userStats.totalKilocalories || 0
-let stressLevel = userStats.averageStressLevel || "--";
+let stressPercent = userStats.stressPercentage || "--";
 
 // SLEEPING
 let minutes = userStats.sleepingSeconds/60;
@@ -390,7 +391,8 @@ let datas = {
   'calories' : calories.toString(),
   'activeMinutes' : (userStats.activeSeconds/60).toFixed(0).toString()+' min',
   'sleepingMinutes' : hours.toString()+'h'+minutes.toString(),
-  'stressLevel' : stressLevel.toString(),
+  'stressPercent' : stressPercent==='--'?stressPercent:Math.ceil(stressPercent).toString()+'%',
+  'floors': Math.floor(userStats.floorsAscended).toString()
 }
 
 /*-------------
@@ -460,18 +462,21 @@ function getHeartRateUI(container,theme,datas,large = false){
 let getMoreInfos = function(container,theme,datas,large = false){
   //CONFIG
   let fontSize = large ? 16 : 14;
+  let rowSpacer = large ? 12 : 8;
   let s = 
   large? {
     'calorie':{'w':13,'h':16},
     'stress':{'w':16,'h':15},
     'walk':{'w':15,'h':18},
     'sleep':{'w':15,'h':15},
+    'floors':{'w':13,'h':12},
   } :
   {
     'calorie':{'w':12,'h':14},
     'stress':{'w':14,'h':13},
     'walk':{'w':14,'h':16},
     'sleep':{'w':13,'h':13},
+    'floors':{'w':11,'h':10},
   };
 
   let separator = container.addText(large?'_':'|');
@@ -489,10 +494,10 @@ let getMoreInfos = function(container,theme,datas,large = false){
 
     //CALORIES
     getTextIcon(moreC1,'calorie',datas.calories,theme.infosColor,fontSize,s.calorie.w,s.calorie.h,1);
-    moreC1.addSpacer(8);
+    moreC1.addSpacer(rowSpacer);
 
     //STRESS LEVEL
-    getTextIcon(moreC1,'stress',datas.stressLevel,theme.infosColor,fontSize,s.stress.w,s.stress.h);
+    getTextIcon(moreC1,'stress',datas.stressPercent,theme.infosColor,fontSize,s.stress.w,s.stress.h);
 
 
   // COL 2
@@ -503,7 +508,7 @@ let getMoreInfos = function(container,theme,datas,large = false){
 
     //ACTIVE MINUTES
     getTextIcon(moreC2,'walk',datas.activeMinutes,theme.infosColor,fontSize,s.walk.w,s.walk.h,1);
-    moreC2.addSpacer(6);
+    moreC2.addSpacer(rowSpacer-2);
 
     //SLEEP TIME
     getTextIcon(moreC2,'sleep',datas.sleepingMinutes,theme.infosColor,fontSize,s.sleep.w,s.sleep.h);
@@ -517,7 +522,11 @@ let getMoreInfos = function(container,theme,datas,large = false){
 
       //ACTIVE MINUTES
       getHeartRateUI(moreC3,theme,datas,large);
-    }
+      moreC3.addSpacer(rowSpacer);
+
+      //FLOORS
+      getTextIcon(moreC3,'floors',datas.floors,theme.infosColor,fontSize,s.floors.w,s.floors.h,1);
+  }
 };
 
 
@@ -742,7 +751,7 @@ let themes = {
   'black':black,
   'evashogoki': eva_shogoki,
   'peach':peach
-};
+}
 
 /*-------------
     LAUNCH
