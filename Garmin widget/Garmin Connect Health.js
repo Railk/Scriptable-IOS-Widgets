@@ -631,7 +631,7 @@ async function createWidget(datas,theme,size) {
             moreStack.addSpacer();
 
               let more = moreStack.addStack();
-              more.setPadding(0,12,0,32);
+              more.setPadding(0,8,0,32);
               getMoreInfos(more,theme,datas,large);
           }
 
