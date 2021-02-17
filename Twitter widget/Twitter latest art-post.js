@@ -104,27 +104,30 @@ async function getUserID(name){
      
     var res = await req.loadJSON();
     return res.data[0].id;
-};
+}
 
 async function getTimeline(id,parameters){
     const req = new Request('https://'+HOST+'/2/users/'+id+'/tweets?'+parameters)
     req.headers = HEADERS;
     
     var res = await req.loadJSON();
-    if(res.includes===undefined) await getTimeline(id,parameters);
-
     return res;
-};
+}
 
 async function getMediaFrom(name,parameters){
     let id = await getUserID(name);
     let twits = await getTimeline(id,parameters);
+
+    if(twits.includes.media.length === 0) {
+	    await getMediaFrom(getRandom(USERS,false),PARAMETERS);
+      return;
+    }
+
     let media = getRandom(twits.includes.media,true);
-    if(media.url === undefined) await getMediaFrom(getRandom(USERS,false),PARAMETERS);
     let twitID = getTwitID(twits.data,media.media_key);
     
     return {"img":media.url,"id":twitID};
-};
+}
 
 
 
