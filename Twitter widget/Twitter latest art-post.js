@@ -60,12 +60,12 @@ async function createWidget(twit){
   infos.addSpacer();
   
     //HANDLE
-    let handle = infos.addText('@'+username);
+    let handle = infos.addText('@'+USERNAME);
     handle.textColor = Color.white();
     handle.font = Font.regularRoundedSystemFont(12);
     handle.shadowColor = Color.black();
     handle.shadowRadius = 1;
-    handle.url = 'https://twitter.com/'+username+(twit.id!==null?'/status/'+twit.id:'');
+    handle.url = 'https://twitter.com/'+USERNAME+(twit.id!==null?'/status/'+twit.id:'');
 
   return widget
 }
@@ -119,8 +119,8 @@ async function getMediaFrom(name,parameters){
     let twits = await getTimeline(id,parameters);
 
     if(twits.includes === undefined ) {
-      username = getRandom(USERS,false);
-	    return await getMediaFrom(username,PARAMETERS);
+      USERNAME = getRandom(USERS,false);
+	    return await getMediaFrom(USERNAME,PARAMETERS);
     }
 
     let media = getRandom(twits.includes.media,true);
@@ -134,8 +134,8 @@ async function getMediaFrom(name,parameters){
 /*------------
   GET TWIT IMG
 -------------*/
-const username = getRandom(USERS,false);
-const twit = await getMediaFrom(username,PARAMETERS);
+let USERNAME = getRandom(USERS,false);
+let TWIT = await getMediaFrom(USERNAME,PARAMETERS);
 
 
 /*------------
@@ -143,13 +143,13 @@ const twit = await getMediaFrom(username,PARAMETERS);
 -------------*/
 let fm = FileManager.iCloud();
 if (config.runsInWidget){
-  await fm.writeString(fm.documentsDirectory()+'/twitter.img.txt',twit.img);
-  let widget = await createWidget(twit);
+  await fm.writeString(fm.documentsDirectory()+'/twitter.img.txt',TWIT.img);
+  let widget = await createWidget(TWIT);
   Script.setWidget(widget);
 } else {
   //let res = await presentAlert('Preview Widget', OPTIONS);
   //if (res===OPTIONS.length-1) return;
-  // let widget = await createWidget(twit);
+  // let widget = await createWidget(TWIT);
   // await widget[`present${OPTIONS[res]}`]();
   
   let url = await fm.readString(fm.documentsDirectory()+'/twitter.img.txt');
@@ -159,7 +159,7 @@ if (config.runsInWidget){
   let n = new Notification();
   n.title = 'Twitget';
   n.subtitle = "";
-  n.body = 'Image from '+username+' saved';
+  n.body = 'Image from '+USERNAME+' saved';
   n.schedule();
 }
 
