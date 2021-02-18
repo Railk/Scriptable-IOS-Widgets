@@ -102,7 +102,9 @@ async function getImg(url) {
 function getTwitID(data,media){
   for (let i = 0; i < data.length; i++) {
     const twit = data[i];
-    if(twit.attachments && twit.attachments.media_keys.includes(media)) return twit.id;
+    if(twit.attachments && twit.attachments.media_keys){
+      if(twit.attachments.media_keys.includes(media)) return twit.id;
+    }
   }
 
   return null;
