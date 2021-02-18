@@ -10,8 +10,8 @@ const HEADERS = {
   'Content-Type': 'application/json',
   'Authorization':'Bearer '+BEARER_TOKEN
 };
-const OPTIONS = ['Small', 'Medium', 'Large', 'Cancel'];
 const REFRESH_INTERVAL = 5;
+const MAXLOOP = 10;
 const PARAMETERS = 'tweet.fields=attachments,created_at'+
                   '&exclude=retweets,replies'+
                   '&expansions=attachments.media_keys'+
@@ -50,7 +50,6 @@ async function createWidget(twit){
   let img = await getImg(twit.img);
 
   const widget = new ListWidget();
-  //widget.url = twit.img;
   widget.refreshAfterDate = new Date(refreshDate);
   widget.setPadding(12,12,12,12);
   widget.backgroundImage = img;
@@ -70,10 +69,26 @@ async function createWidget(twit){
   return widget
 }
 
+function createWidgetError(){
+  let refreshDate = Date.now() + 1000*60*REFRESH_INTERVAL;
+
+  const widget = new ListWidget();
+  widget.refreshAfterDate = new Date(refreshDate);
+  widget.setPadding(12,12,12,12);
+  widget.backgroundColor = new Color("1DA1F2");
+
+  let infos = widget.addStack();
+  let handle = infos.addText('Nothing to see 😞');
+  handle.textColor = Color.white();
+  handle.font = Font.regularRoundedSystemFont(18);
+
+  return widget;
+}
+
 function getRandom(array,istwit) {
   if(istwit){
     let media = array[Math.floor(Math.random() * array.length)];
-    if(media.type!=='photo') getRandom(array,true);
+    if(media.type!=='photo') return getRandom(array,true);
     return media;
   }
   return array[Math.floor(Math.random() * array.length)];
@@ -118,14 +133,20 @@ async function getMediaFrom(name,parameters){
     let id = await getUserID(name);
     let twits = await getTimeline(id,parameters);
 
-    if(twits.includes === undefined ) {
-      USERNAME = getRandom(USERS,false);
-	    return await getMediaFrom(USERNAME,PARAMETERS);
+    if(twits.includes === undefined || twits.errors !== undefined) {
+	    USERNAME = getRandom(USERS,false);
+      LOOP+=1;
+      if(LOOP===MAXLOOP) {
+        LOOP=0;
+        return null;
+      } else {
+        return await getMediaFrom(USERNAME,PARAMETERS);
+      }
     }
 
     let media = getRandom(twits.includes.media,true);
     let twitID = getTwitID(twits.data,media.media_key);
-    
+
     return {"img":media.url,"id":twitID};
 }
 
@@ -134,9 +155,9 @@ async function getMediaFrom(name,parameters){
 /*------------
   GET TWIT IMG
 -------------*/
+let LOOP = 0;
 let USERNAME = getRandom(USERS,false);
 let TWIT = await getMediaFrom(USERNAME,PARAMETERS);
-
 
 /*------------
  LAUNCH WIDGET
@@ -144,18 +165,18 @@ let TWIT = await getMediaFrom(USERNAME,PARAMETERS);
 let fm = FileManager.iCloud();
 if (config.runsInWidget){
   await fm.writeString(fm.documentsDirectory()+'/twitter.img.txt',TWIT.img);
-  let widget = await createWidget(TWIT);
+  let widget = (TWIT!==null) ? await createWidget(TWIT) : createWidgetError();
   Script.setWidget(widget);
 } else {
-  //let res = await presentAlert('Preview Widget', OPTIONS);
-  //if (res===OPTIONS.length-1) return;
-  // let widget = await createWidget(TWIT);
-  // await widget[`present${OPTIONS[res]}`]();
-  
+  // DEBUG
+  //let widget = (TWIT!==null) ? await createWidget(TWIT) : createWidgetError();
+  //await widget.presentLarge();
+
+  // SAVE 
   let url = await fm.readString(fm.documentsDirectory()+'/twitter.img.txt');
   var img = await getImg(url);
   await Photos.save(img);
-  //Notification
+  // NOTIFICATION
   let n = new Notification();
   n.title = 'Twitget';
   n.subtitle = "";
