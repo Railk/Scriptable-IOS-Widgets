@@ -119,7 +119,8 @@ async function getMediaFrom(name,parameters){
     let twits = await getTimeline(id,parameters);
 
     if(twits.includes === undefined ) {
-	    return await getMediaFrom(getRandom(USERS,false),PARAMETERS);
+      username = getRandom(USERS,false);
+	    return await getMediaFrom(username,PARAMETERS);
     }
 
     let media = getRandom(twits.includes.media,true);
