@@ -182,7 +182,7 @@ if (config.runsInWidget){
   let n = new Notification();
   n.title = 'Twitget';
   n.subtitle = "";
-  n.body = 'Image from '+USERNAME+' saved';
+  n.body = 'Image saved';
   n.schedule();
 }
 
